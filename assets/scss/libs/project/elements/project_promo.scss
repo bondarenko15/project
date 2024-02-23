@@ -1,0 +1,213 @@
+.promo_project {
+    padding: 154px 0 0px;
+
+    .container {
+        .promo_back {
+            color: $Color_black;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 150%;
+            letter-spacing: 0.36px;
+            text-transform: capitalize;
+            display: block;
+            padding-left: 40px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background: url('../img/arrow_back.svg') center center/cover no-repeat;
+                top: 3px;
+                left: 12px;
+                width: 18px;
+                height: 14px;
+            }
+
+        }
+
+        .promo_project_wrapper {
+
+            &-subtitle {
+                color: $Color_black;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 130%;
+                letter-spacing: 1.1px;
+                text-transform: uppercase;
+                display: block;
+                margin-top: 22px;
+            }
+
+            &__items {
+                display: flex;
+                margin-top: 15px;
+
+                &-item {
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 40px;
+
+                    &-light {
+                        color: $Color_black;
+                        font-family: 'RobotoCondensed';
+                        font-size: 12px;
+                        font-weight: 300;
+                        line-height: 150%;
+                        letter-spacing: 0.48px;
+                        text-transform: lowercase;
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    &-bold {
+                        color: $Color_black;
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 125%;
+
+                        i {
+                            vertical-align: super;
+                            font-size: 8px;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        .promo_project_wrapper__items-item-light {
+                            margin-bottom: 2px;
+                        }
+                    }
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    &_img {
+        margin: 50px 0 0;
+        width: 100%;
+        height: 280px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.00) 51.92%);
+        }
+
+    }
+}
+
+@media (min-width: 768px) {
+    .promo_project {
+        padding: 189px 0 0;
+
+        .container {
+            .promo_project_wrapper {
+                &-subtitle {
+                    font-size: 28px;
+                    line-height: 130%;
+                    letter-spacing: 1.4px;
+                }
+
+                &__items {
+                    &-item {
+                        &-light {
+                            font-size: 14px;
+                        }
+
+                        &-bold {
+                            font-size: 16px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .promo_project {
+        padding: 158px 0 0;
+
+        .container {
+            .promo_back {
+                font-size: 14px;
+                letter-spacing: 0.42px;
+                padding-left: 50px;
+            }
+
+            .promo_project_wrapper {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+
+                &-subtitle {
+                    font-size: 38px;
+                    letter-spacing: 1.9px;
+                    width: 468px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        &_img {
+            height: 375px;
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .promo_project {
+        padding: 200px 0 0;
+        .container {
+            .promo_project_wrapper {
+                &-subtitle {
+                    font-size: 48px;
+                    width: 635px;
+                    letter-spacing: 2.6px;
+                }
+                &__items {
+                    width: 418px;
+                    &-item {
+                        &-light {
+                            font-size: 16px;
+
+                        }
+                        &-bold {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        &_img {
+            height: 525px;
+        }
+    }
+}
+
+@media (min-width: 1880px) {
+    .promo_project {
+        .container {
+          .promo_project_wrapper {
+            &-subtitle {
+                width: 850px;
+                font-size: 58px;
+            }
+          }  
+        }
+        &_img {
+            height: 646px;
+        }
+    }
+}

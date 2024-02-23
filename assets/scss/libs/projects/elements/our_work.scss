@@ -1,0 +1,234 @@
+.our_work {
+    padding: 0 0 60px;
+    .container {
+        .tabs__btn {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 335px;
+            &-item {
+                padding: 10px 15px;
+                border-radius: 3px;
+                color: $Color_black;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 10px;
+                font-weight: 500;
+                text-transform: uppercase;
+                cursor: pointer;
+                position: relative;
+                button {
+                    background: transparent;
+                    border: none;
+                    position: absolute;
+                    inset: 0;
+                }
+            }
+            &-item_active {
+                background: $Color_black;
+                color: $Color_white;
+            }
+            
+        }
+        .our_work__items {
+            padding: 20px 0 0;
+
+            &-item {
+                margin: 0px auto 43px;
+                width: 335px;
+                .img {
+                    width: 100%;
+                    height: 495px;
+                    position: relative;
+                    img {
+                        height: 100%;
+                        background-size: cover;
+                    }
+                }
+                &__title {
+                    color:  $Color_black;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 125%;
+                    text-transform: uppercase;
+                    display: block;
+                    margin-top: 20px;
+                }
+                &__descr {
+                    color:  $Color_black;
+                    font-family: 'RobotoCondensed', sans-serif;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 150%;
+                    letter-spacing: 0.56px;
+                    display: block;
+                    margin-top: 10px;
+                }
+            }
+            .hidden {
+                display: none;
+            }
+        }
+        .more {
+            background: transparent;
+            border: none;
+            display: block;
+            margin: 0 auto;
+            color: $Color_black;
+            font-family: 'Montsserat', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.36px;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .our_work {
+        padding: 0 0 115px;
+        .container {
+            .tabs__btn {
+                margin: 0;
+                width: 365px;
+                &-item {
+                    padding: 12px 20px;
+                }
+            }
+            .our_work__items {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                width: 668px;
+                margin: 0 auto;
+                &-item {
+                    margin: 0;
+                    width: 324px;
+                    margin-bottom: 40px;
+                    .img {
+                        height: 480px;
+                    }
+                    &__descr {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .our_work {
+        padding: 0 0 102px;
+        .container {
+            .tabs__btn {
+                width: 400px;
+                &-item {
+                    font-size: 12px;
+                    transition: ease .3s all;
+                    border: 1px solid transparent;
+                    &:hover {
+                        border: 1px solid $Color_black;
+                        background: rgba(0, 0, 0, 0.10);
+                    }
+                }
+                &-item_active {
+                    &:hover {
+                        background:$Color_black;
+                    }
+                }
+            }
+            .our_work__items {
+                width: 924px;
+                &-item {
+                    width: 452px;
+                    margin-bottom: 50px;
+                    .img {
+                        height: 650px;
+                        overflow: hidden;
+                        img {
+                            transition: .5s; /* Время эффекта */
+                        }   
+                    }
+                    &:hover {
+                        .img {
+                            img {
+                                scale: 1.1;
+                                transition: .5s; /* Время эффекта */
+                            }
+                        }
+                    }
+                }
+            }
+            .more {
+                font-size: 14px;
+                letter-spacing: 0.42px;
+            }
+        }
+    }
+}
+@media (min-width: 1366px) {
+    .our_work {
+        padding: 0 0 165px;
+        .container {
+            .tabs__btn {
+                &-item {
+                    padding: 13px 20px;
+                }
+            }
+            .our_work__items {
+                width: 1240px;
+                &-item {
+                    width: 400px;
+                    .img {
+                        height: 515px;
+                    }
+                    &__title {
+                        font-size: 20px;
+                    }
+                    &__descr {
+                        font-size: 16px;
+                        margin-top: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1880px) {
+    .our_work {
+        padding: 0 0 200px;
+        .container {
+            .tabs__btn {
+                width: 437px;
+                &-item {
+                    font-size: 14px;
+                    padding: 15px 20px;
+                }
+            }
+            .our_work__items {
+                padding: 17px 0 0;
+                width: 1720px;
+                &-item {
+                    width: 560px;
+
+                    .img {
+                        height: 650px;
+                    }
+                    &__title {
+                        font-size: 22px;
+                    }
+                    &__descr {
+                        width: 484px;
+                        letter-spacing: .7px;
+                        font-size: 18px;
+                    }
+                }
+            }
+            .more {
+                margin: 80px auto 0;
+            }
+        }
+    }
+}

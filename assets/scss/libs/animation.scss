@@ -1,0 +1,23 @@
+@keyframes rotate { 
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
+
+  @keyframes call { 
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+  }

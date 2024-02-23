@@ -1,0 +1,125 @@
+.video {
+    padding: 0 0 73px;
+    .wrapper {
+        width: 100%;
+        z-index: 5;
+        position: relative;
+        iframe {
+            width: 100%;
+            height: auto;
+            height: 275px;
+        }
+        .bg {
+            position: absolute;
+            inset: 0;
+        }
+        #play{
+            position:absolute;
+            width:30px;
+            height:30px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            cursor: pointer;
+          }
+    }
+
+    .container {
+        p {
+            color: #000;
+            font-family: 'RobotoCondensed', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 150%;
+            letter-spacing: 0.56px;
+            display: block;
+            margin-top: 38px;
+
+        }
+
+    }
+}
+@media (min-width: 768px) {
+    .video {
+        padding: 0 0 125px;
+        .wrapper {
+            iframe {
+                height: 321px;
+            }
+            #play {
+                width: 38px;
+                height: 38px;
+            }
+        }
+        .container {
+            .video__descr {
+                width: 580px;
+                margin-top: 40px;
+            }
+            
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .video {
+        padding: 0 0 97px;
+        .wrapper {
+            iframe {
+                height: 434px;
+            }
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+@media (min-width: 1366px) {
+    .video {
+        padding: 0 0 180px;
+
+       .wrapper {
+        height: 600px;
+            iframe {
+                height: 600px;
+            }
+            #play {
+                width: 50px;
+                height: 50px;
+            }
+       } 
+       .container {
+        .video__descr {
+            letter-spacing: .62px;
+            font-size: 16px;
+            width: 600px;
+            margin-top: 53px;
+        }
+       }
+    }
+}
+@media (min-width: 1880px) {
+    .video {
+        padding: 0 0 200px;
+        .wrapper {
+            height: 800px;
+            iframe {
+                height: 800px;
+                
+            }
+            #play {
+                width: 68px;
+                height: 68px;
+            }
+                          
+        }
+        .container {
+            .video__descr {
+                margin-top: 50px;
+                font-size: 18px;
+                width: 720px;
+                letter-spacing: 0.7px;
+            }
+        }
+    }
+}

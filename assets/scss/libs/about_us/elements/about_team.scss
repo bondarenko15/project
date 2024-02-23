@@ -1,0 +1,222 @@
+.about_team {
+    position: relative;
+    padding: 68px 0 45px;
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.90);
+        z-index: -1;
+    }
+    .container {
+        position: relative;
+        .about_team__swiper {
+            padding-top: 50px;
+            width: 335px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            .swiper-wrapper {
+                display: flex;
+                width: 100%;
+                .swiper-slide {
+                    
+                    &_img {
+                        width: 335px;
+                        height: 245px;
+                    }
+                    &_items {
+                        &-title {
+                            display: block;
+                            margin: 40px 0 25px;
+                            color: $Color_white;
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 20px;
+                            font-weight: 500;
+                            line-height: 146%;
+                            letter-spacing: 1px;
+                        }
+                        &-descr {
+                            color: $Color_white;
+                            font-family: 'RobotoCondensed';
+                            font-size: 14px;
+                            font-weight: 300;
+                            line-height: 150%;
+                            letter-spacing: 0.56px;
+                            display: block;
+                            margin: 0 0 15px 0;
+                        }
+                    }
+                }
+            }
+            .swiper-button-prev {
+                background: url('../img/arrow_white.svg') center center/cover no-repeat;
+                position: absolute;
+                top: 40px;
+                left: 39%;
+                width: 16px;
+                height: 14px;
+                z-index: 5;
+                transform: rotate(180deg);
+                &::after {
+                    display: none;
+                }
+            }
+            .swiper-button-next {
+                background: url('../img/arrow_white.svg') center center/cover no-repeat;
+                position: absolute;
+                top: 40px;
+                left: 56%;
+                width: 16px;
+                height: 14px;
+                z-index: 5;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .about_team {
+        padding: 108px 0 85px;
+        .container {
+            .about_team__swiper {
+                width: 100%;
+                position: static;
+                padding-top: 32px;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        &_img{
+                            width: 100%;
+                            height: 488px;
+                        }
+                        &_items {
+                            &-title {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+                .swiper-button-prev {
+                    left: 82%;
+                    top: 23px;
+                }
+                .swiper-button-next {
+                    left: 89.5%;
+                    top: 23px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .about_team {
+        padding: 108px 0 85px;
+        .container {
+            .about_team__swiper {
+                width: 100%;
+                padding-top: 38px;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        &_img {
+                            width: 452px;
+                            height: 330px;
+                        }
+                       
+                        &_items {
+                            width: 452px;
+                            &-title {
+                                margin-top: 0;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+                .swiper-button-prev {
+                    left: 40.5%;
+                }
+                .swiper-button-next {
+                    left: 46%;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1366px) {
+    .about_team {
+        .container {
+            .about_team__swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        &_img {
+                            width: 504px;
+                            height: 366px;
+                        }
+                        &_items {
+                            width: 610px;
+                            &-title {
+                                font-size: 20px;
+                            }
+                            &-descr {
+                                font-size: 16px;
+                                letter-spacing: 0.64px;
+                            }
+                        }
+                    }
+                }
+                .swiper-button-prev {
+                    left: 36%;
+                }
+                .swiper-button-next {
+                    left: 40%;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1880px) {
+    .about_team {
+        padding: 105px 0 100px;
+        .container {
+            .about_team__swiper {
+                padding-top: 47px;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        &_img {
+                            width: 706px;
+                            height: 514px;
+                        }
+                        &_items {
+                            width: 725px;
+                            &-title {
+                                font-size: 26px;
+                                letter-spacing: 1.3px;
+                                margin: 0 0 30px;    
+                            }
+                            &-descr {
+                                font-size: 18px;
+                                letter-spacing: 0.72px;
+                                margin: 0 0 20px;
+                            }
+                        }
+                    }
+                }
+                .swiper-button-prev {
+                    left: 37.5%;
+                    top: 26px;
+                }
+                .swiper-button-next {
+                    left: 40.5%;
+                    top: 26px;
+                }
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,277 @@
+.project_stages {
+    padding: 0 0 87px;
+    .container {
+        .project_stages_wrapper {
+            padding: 70px 0 0 ;
+            .project_stages_content {
+                &-subtitle {
+                    color: $Color_black;
+                    font-family: 'Montserrat' , sans-serif;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 146%;
+                    letter-spacing: 0.9px;
+                    display: block;
+                    margin-top: 20px;
+                }
+                &-descr {
+                    color: $Color_black;
+                    font-family: 'RobotoCondensed';
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 150%;
+                    letter-spacing: 0.56px;
+                    display: block;
+    
+                    margin-top: 29px;
+                }
+            }
+            .project_stages_items {
+                margin: 28px auto 0;
+                &-item {
+                    margin: 0 auto 15px;
+                    width: 335px;
+                    height: 201px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    &_button {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        &-prev {
+            font-size: 0;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 31px;
+                background: url('../img/arrow_back.svg') center center/cover no-repeat;
+                width: 18px;
+                height: 14px;
+            }
+        }
+        &-next {
+            font-size: 0;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 31px;
+                background: url('../img/arrow_back.svg') center center/cover no-repeat;
+                width: 18px;
+                height: 14px;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .project_stages {
+        padding: 0 0 120px;
+      .container {
+        .project_stages_wrapper {
+            padding: 120px 0 0;
+            .project_stages_content {
+                &-descr {
+                    display: block;
+                    margin-top: 28px;
+                    width: 460px;
+                }
+            }
+            .project_stages_items {
+                display: flex;
+                justify-content: space-between;
+                margin: 50px 0 0;
+                &-item {
+                    margin: 0;
+                    width: 324px;
+                    height: 195px;
+                }
+            }
+        }
+      }  
+      &_button {
+        margin: 52px 0 0;
+        &-prev {
+            color: $Color_black;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.36px;
+            font-size: 12px;
+            padding: 0 0 0 90px;
+            &::before {
+                left: 62px;
+                top: 2px;
+            }
+        }
+        &-next {
+            font-size: 12px;
+            color: $Color_black;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.36px;
+            padding: 0px 90px 0 0;
+            
+            &::after {
+                right: 62px;
+                top: 2px;
+            }
+
+        }
+      }
+    }
+}
+@media (min-width: 1024px) {
+    .project_stages {
+        padding: 0px 0 125px;
+        .container {
+            .project_stages_wrapper {
+                .project_stages_content {
+                    margin: 20px 0 0;
+                    display: flex;
+                    justify-content: space-between;
+                    &-subtitle {
+                        display: block;
+                        width: 472px;
+                        margin: 0;
+                    }
+                    &-descr {
+                        width: 354px;
+                        margin: 0;
+                    }
+                }
+                .project_stages_items {
+                    &-item {
+                        width: 452px;
+                        height: 272px;
+                    }
+                }
+            }
+        }
+        &_button {
+            &-prev {
+                font-size: 14px;
+                padding: 0 0 0 100px;
+                &::before {
+                    top: 4px;
+                }
+            }
+            &-next {
+                font-size: 14px;
+                padding: 0 100px 0 0;
+                &::after {
+                    top: 4px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1366px) {
+    .project_stages {
+        padding: 0 0 185px;
+        .container {
+            .project_stages_wrapper {
+                padding: 180px 0 0;
+                .project_stages_content {
+                    margin: 30px 0 0;
+                    &-subtitle {
+                        width: 630px;
+                        font-size: 20px;
+                    }
+                    &-descr {
+                        width: 450px;
+                        font-size: 16px;
+                    }
+                }
+                .project_stages_items {
+
+                    &-item {
+                        width: 612px;
+                        height: 370px;
+                    }
+                }
+            }
+        }
+        &_button {
+            margin: 55px 0 0;
+            font-size: 14px;
+            &-prev {
+                font-size: 14px;
+                padding: 0 0 0 150px;
+                &::before {
+                    top: 3px;
+                    left: 112px;
+                }
+            }
+            &-next {
+                font-size: 14px;
+                padding: 0 150px 0 0;
+                &::after {
+                    top: 3px;
+                    right: 112px;
+                }
+            }
+        }
+    }
+} 
+
+@media (min-width: 1880px) {
+    .project_stages {
+        padding: 0 0 200px;
+        .container {
+            .project_stages_wrapper {
+                padding: 200px 0 0;
+                .project_stages_content {
+                    margin: 30px 0 0;
+                    &-subtitle {
+                        width: 870px;
+                        font-size: 26px;
+                    }
+                    &-descr {
+                        width: 560px;
+                        font-size: 18px;
+                    }
+                }
+                .project_stages_items {
+
+                    &-item {
+                        width: 840px;
+                        height: 514px;
+                    }
+                }
+            }
+        }
+        &_button {
+            margin: 55px 0 0;
+            &-prev {
+                font-size: 14px;
+                padding: 0 0 0 150px;
+                &::before {
+                    top: 3px;
+                    left: 112px;
+                }
+            }
+            &-next {
+                font-size: 14px;
+                padding: 0 150px 0 0;
+                &::after {
+                    top: 3px;
+                    right: 112px;
+                }
+            }
+        }
+    }
+} 

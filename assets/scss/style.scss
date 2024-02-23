@@ -1,0 +1,29 @@
+@import "libs/fonts";
+@import "libs/basic";
+@import 'libs/swiper';
+@import "libs/variables";
+@import 'libs/normalize';
+@import 'libs/animation';
+
+
+
+@import 'libs/repeating_elements/links';
+@import 'libs/repeating_elements/title';
+
+
+
+@import 'libs/repeating_sections/our_projects';
+@import "libs/repeating_sections/header";
+@import "libs/repeating_sections/footer";
+@import "libs/repeating_sections/menu_overlay";
+@import 'libs/repeating_sections/promo';
+@import 'libs/repeating_sections/feedback';
+
+
+
+
+@import 'libs/index/index';
+@import 'libs/about_us/about_us.scss';
+@import 'libs/projects/projects';
+@import 'libs/project/project';
+@import 'libs/contacts/contacts';

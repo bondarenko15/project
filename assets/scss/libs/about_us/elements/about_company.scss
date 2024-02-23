@@ -1,0 +1,176 @@
+.about_company {
+    padding-bottom: 50px;
+    .container {
+        .about_company__descr {
+            &-bold {
+                color: $Color_black;
+                font-family: 'Montserrat' , sans-serif;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 146%;
+                letter-spacing: 0.9px;
+                margin: 20px 0 0;
+                display: block;
+                
+            }
+            &-semibold {
+                display: block;
+                color: $Color_black;
+                font-family: 'RobotoCondensed';
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 150%;
+                margin: 27px 0 0;
+                letter-spacing: .56px;
+
+            }
+        }
+        .about_company__items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 335px;
+            margin: 40px auto 0;
+            &-item {
+                width: 105px;
+                height: 36px;
+                display: block;
+                margin: 0 0 20px ;
+                &:nth-child(4) {
+                    margin-left: 57px;
+                }
+                &:nth-child(5) {
+                    margin-right: 57px;
+                }
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px)  {
+    .about_company {
+        padding-bottom: 120px;
+        .container {
+            .about_company__descr {
+                &-semibold {
+                    width: 400px;
+                }
+            }
+            .about_company__items {
+                
+                flex-wrap: nowrap;
+                margin: 70px 0 0;
+                width: 100%;
+                &-item {
+                    width: 120px;
+                    height: 45px;
+                    margin: 0;
+                    
+                    &:nth-child(4) {
+                        margin: 0;
+                    }
+                    &:nth-child(5) {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .about_company {
+        .container {
+            .about_company__descr {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                &-bold {
+                    width: 472px;
+                }
+                &-semibold {
+                    width: 355px;
+
+                }
+            }
+            .about_company__items {
+                margin: 77px 0 0;
+                &-item {
+                    
+                    width: 160px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1366px) {
+    .about_company {
+        padding-bottom: 180px;
+        .container {
+            .about_company__descr {
+                margin: 32px 0 0;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                &-bold {
+                    width: 630px;
+                    font-size: 20px;
+                    margin: 0;
+                    letter-spacing: 1px;
+                }
+                &-semibold {
+                    margin: 0;
+                    font-size: 16px;
+                    width: 418px;
+                    letter-spacing: 0.64px;
+
+                }
+            }
+            .about_company__items {
+                margin: 98px 0 0;
+                &-item {
+                    width: 215px;
+                    height: 75px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1880px) {
+    .about_company {
+        padding-bottom: 200px;  
+        .container {
+            .about_company__descr {
+                margin: 32px 0 0;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                &-bold {
+                    width: 870px;
+                    font-size: 26px;
+                    margin: 0;
+                    letter-spacing: 1.3px;
+                }
+                &-semibold {
+                    margin: 0;
+                    font-size: 18px;
+                    width: 560px;
+                    letter-spacing: 0.72px;
+
+                }
+            }
+            .about_company__items {
+                margin: 120px 0 0;
+                &-item {
+                    width: 290px;
+                    height: 94px;
+                }
+            }
+        }
+    }
+}
