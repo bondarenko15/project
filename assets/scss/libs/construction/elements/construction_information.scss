@@ -1,0 +1,113 @@
+.construction_information {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, rgba(102, 102, 102, 0.00) 0%, rgba(0, 0, 0, 0.30) 40.5%, rgba(0, 0, 0, 0.30) 63.5%, rgba(102, 102, 102, 0.00) 100%);
+        backdrop-filter: blur(2px);
+    }
+    .container {
+        .wrapper {
+            padding: 40px 0;
+            .construction_information-title {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 150%;
+                letter-spacing: .5px;
+                text-transform: uppercase;
+                color: $Color_white;
+                text-align: center;
+            }
+            .construction_information-subtitle {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 125%;
+                letter-spacing: 0.05em;
+                text-align: center;
+                color: $Color_white;
+                display: block;
+                margin-top: 30px;
+            }
+            
+        }
+        
+    }
+}
+@media (min-width: 768px) {
+    .construction_information {
+        .container {
+            .wrapper {
+                padding: 65px 0;
+                .construction_information-title {
+                    font-size: 12px;
+                    letter-spacing: 0.48px;
+                }
+                .construction_information-subtitle {
+                    letter-spacing: 0.9px;
+                    font-size: 18px;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .construction_information {
+        .container {
+            .wrapper {
+                padding: 120px 0;
+                .construction_information-title {
+                    font-size: 14px;
+                }
+                .construction_information-subtitle {
+                    letter-spacing: 1px;
+                    font-size: 20px;
+                    width: 655px;
+                    margin: 30px auto 0;
+                }
+            } 
+        }
+    }
+}
+@media (min-width: 1366px) {
+    .construction_information {
+        .container {
+            .wrapper {
+                padding: 185px 0;
+                .construction_information-title {
+                    font-size: 16px;
+                    letter-spacing: 0.64px;
+                }
+                .construction_information-subtitle {
+                    letter-spacing: 1.3px;
+                    font-size: 26px;
+                    width: 836px;
+                    margin: 30px auto 0;
+                }
+            } 
+        }
+    }
+}
+@media (min-width: 1880px) {
+    .construction_information {
+        .container {
+            .wrapper {
+                padding: 265px 0;
+                .construction_information-title {
+                    font-size: 18px;
+                    letter-spacing: 0.72px;
+                }
+                .construction_information-subtitle {
+                    letter-spacing: 1.8px;
+                    font-size: 36px;
+                    width: 1076px;
+                    margin: 30px auto 0;
+                }
+            } 
+        }
+    }
+}

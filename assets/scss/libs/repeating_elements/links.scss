@@ -15,7 +15,7 @@
         content: '';
         position: absolute;
         background: url('../img/box.svg') center center/cover no-repeat;
-        top: -3px;
+        top: -5px;
         right: -31px;
         width: 30px;
         height: 30px;
@@ -26,21 +26,41 @@
         position: absolute;
         background: url('../img/arrow.svg') center center/cover no-repeat;
         top: -2px;
-        right: -26px;
-        width: 20px;
-        height: 20px;
+        right: -27px;
+        width: 24px;
+        height: 24px;
         z-index: 5;
         transition: .2s all;
     }
     &-video {
         margin-top: 23px;
         &::before {
-            top: -2px;
+            top: -5px;
             right: -10px;
         }
         &::after {
-            top: -1px;
+            top: -2px;
+            right: -7px;
+        }
+    }
+    &-construction {
+        color: $Color_white;
+        display: block;
+        margin: 57px 0 0 44px;
+        font-weight: 400;
+        &::before {
+            background: url('../img/box-white.svg') center center/cover no-repeat;
+            top: -5px;
+            right: -7px;
+            width: 24px;
+            height: 24px;
+        }
+        &::after {
+            background: url('../img/arrow_white.svg') center center/cover no-repeat;
+            top: -2px;
             right: -5px;
+            width: 20px;
+            height: 20px;
         }
     }
 }
@@ -51,16 +71,37 @@
         &-video {
             margin-top: 34px;
         }
+        &-construction {
+            width: 100%;
+            text-align: center;
+            letter-spacing: 0.36px;
+            font-size: 12px;
+            margin: 53px auto 0;
+            padding-right: 26px;
+            font-weight: 400;
+            width: 250px;
+            &::before {
+                top: -4px;
+                right: 1px;
+            }
+            &::after {
+                right: 2px;
+                width: 22px;
+                height: 22px;
+            }
+        }
     }
 }
 @media (min-width: 1024px) {
     .link__animate {
+        &::after {
+            right: -28px;
+        }
         &:hover {
             transition: .2s all;
             font-weight: 500;
             &::after {
                 transform: rotate(45deg);
-
             }
         }
         &-video {
@@ -70,7 +111,7 @@
                 right: -4px;
             }
             &::after {
-                right: 2px;
+                right: -1px;
             }
         }
         &-slider {
@@ -80,14 +121,20 @@
                 right: 15px;
             }
             &::after {
-                right: 19px;
+                right: 20px;
+                top: -4px;
             }
             &:hover {
                 font-weight: 400;
                 &::after {
-                    transform: rotate(0);
+                    transform: rotate(45deg);
     
                 }
+            }
+        }
+        &-construction {
+            &::after {
+                right: 1px;
             }
         }
     }
@@ -97,6 +144,24 @@
         &-video {
             margin-top: 55px;
         }
+        &-construction {
+            font-size: 14px;
+            letter-spacing: 0.42px;
+            width: 310px;
+            margin: 56px auto 0;
+            padding-right: 34px;
+            &::before {
+                right: 11px;
+                width: 28px;
+                height: 28px;
+            }
+            &::after {
+                top: -2px;
+                width: 24px;
+                height: 24px;
+                right: 13px;
+            }
+        }
     }
 }
 @media (min-width: 1880px) {
@@ -105,16 +170,16 @@
         font-size: 14px;
         width: 280px;
         &::before {
-            top: -5px;
-            right: -31px;
+            top: -8px;
+            right: -40px;
             width: 34px;
             height: 34px;
         }
         &::after {
-            top: -4px;
-            right: -26px;
-            width: 24px;
-            height: 24px;
+            top: -5px;
+            right: -37px;
+            width: 28px;
+            height: 26px;
         }
         &-video {
             width: 287px;
@@ -123,7 +188,32 @@
                 right: -3px;
             }  
             &::after {
-                right: 1px;
+                top: -3px;
+                right: 0px;
+            }
+        }
+        &-slider {
+            &:before {
+                right: 16px;
+            }
+            &::after {
+                top: -3px;
+                right: 19px;
+            }
+        }
+        &-construction {
+            width: 296px;
+            margin-top: 51px;
+            padding-right: 15px;
+            &::before {
+                top: -5px;
+                right: -4px;
+                width: 28px;
+                height: 28px;
+            }
+            &::after {
+                top: -3px;
+                right: -4px;
             }
         }
     }

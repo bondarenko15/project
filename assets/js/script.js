@@ -23,14 +23,60 @@ if (swiperWorkProcess) {
   })
 }
 
-const swiperProjects = document.querySelector('.projects') || null;
-if  (swiperProjects) {
-  const sliderProjects = new Swiper('.projects__swiper', {
-    // Optional parameter
+const swiperConstructionStages = document.querySelector('.construction_stages') || null;
+if (swiperConstructionStages) {
+  document.addEventListener('DOMContentLoaded', () => {
+    const removeSlider = document.querySelector('.construction_stages-swiper');
+    const removeGrid = document.querySelector('.construction_stages-grid');
+    const width = window.innerWidth
+    if (width < 768) {
+      const swiper = new Swiper('.construction_stages-swiper', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 50,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+      removeGrid.remove();
+    } else {
+      removeSlider.remove()
+    }
+  })
+}
+
+const swiperReviews = document.querySelector('.construction_reviews') || null;
+if (swiperReviews) {
+  const sliderReviews = new Swiper('.construction_reviews-slider', {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 50,
-  
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+      1880: {
+        slidesPerView: 'auto',
+        spaceBetween: 50,
+      }
+    }
+  });
+}
+
+const swiperProjects = document.querySelector('.projects') || null;
+if (swiperProjects) {
+  const sliderProjects = new Swiper('.projects__swiper', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 50,
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -48,7 +94,6 @@ if  (swiperProjects) {
 const swiperAboutUs = document.querySelector('.about_team__swiper') || null;
 if (swiperAboutUs) {
   let sliderAboutUs = new Swiper('.about_team__swiper', {
-    // Optional parameter
     loop: true,
     slidesPerView: 1,
     spaceBetween: 10,
@@ -85,6 +130,8 @@ for (let i = 0; i < tabs.length; i++) {
 //form validation
 
 const form = document.querySelector('.form') || null;
+const reviewData = new FormData();
+const thanksModal = document.querySelector('.thanks_modal');
 if (form) {
   form.addEventListener('submit', (e) => {
     const userName = document.querySelector('#userName');
@@ -114,6 +161,25 @@ if (form) {
     } else {
       userName.classList.remove('error');
     }
+    if ( valid ) {
+      reviewData.append('review_message', textMessage);
+      reviewData.append('review_name', userName);
+      reviewData.append('review_phone', userPhone);
+
+      sendForm(
+          reviewData,
+          '/wp-admin/admin-ajax.php'
+      ).then( response => {
+          if ( response.status === 'success' ) {
+              thanksModal.classList.add('thanks_modal-active');
+
+              setTimeout(() => {
+                  thanksModal.classList.remove('thanks_modal-active');
+              }, 3000);
+          } else {
+          }
+      });
+  }
   });
 
   form.querySelector('[name="userName"]').addEventListener('input', () => {
@@ -154,19 +220,34 @@ if (form) {
   }
 }
 
+
+async function sendForm( formData, url ) {
+
+  let request = await fetch(
+      url,
+      {
+          method: 'POST',
+          body: formData
+      }
+  );
+
+  let response = await request.json();
+
+  return response;
+}
 //
 
 
 
 // header fixed
 
-  var element = document.querySelector('.header');
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 1) {
-        element.classList.add("fixed");
-    } else {
-        element.classList.remove("fixed");
-    }
+var element = document.querySelector('.header');
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 1) {
+    element.classList.add("fixed");
+  } else {
+    element.classList.remove("fixed");
+  }
 });
 
 //
@@ -219,19 +300,57 @@ function onYouTubePlayerAPIReady() {
   player = new YT.Player('player', {
     videoId: '8WtRKHwVROs',
     playerVars: {
-                'controls': 1,
-                'modestbranding': 1,
-                'rel': 0,
-                'showinfo': 0,
-                'fs': 0,
-                'autoplay': 0
-              }
+      'controls': 1,
+      'modestbranding': 1,
+      'rel': 0,
+      'showinfo': 0,
+      'fs': 0,
+      'autoplay': 0
+    }
   });
 }
 function playVideo() {
-      player.playVideo();
-      document.getElementById("play").remove();
-      document.getElementById("bg").style = 'display:none';
-    }
+  player.playVideo();
+  document.getElementById("play").remove();
+  document.getElementById("bg").style = 'display:none';
+}
 
 //
+
+
+// accordion
+
+const accordion = document.querySelectorAll('.accordion_item-title');
+
+accordion.forEach((item) => {
+  item.addEventListener('click', () => {
+    const parent = item.parentNode;
+    let content = item.nextElementSibling;
+    
+    if (parent.classList.contains('accordion_item-active' || null)) {
+      parent.classList.remove('accordion_item-active');
+    } else {
+      document.querySelectorAll('.accordion_item').forEach((child) => child.classList.remove('accordion_item-active'))
+      parent.classList.add('accordion_item-active')
+      
+      
+    }
+  })
+})
+
+
+ //
+
+
+ // function closeModal
+
+const closeModal = document.querySelector('.thanks_modal-close');
+function closeThanksModal() {
+  closeModal.addEventListener('click', () => {
+    thanksModal.classList.remove('thanks_modal-active');
+  })
+}
+
+
+//
+closeThanksModal();

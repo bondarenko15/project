@@ -1,0 +1,578 @@
+.construction_stages {
+    position: relative;
+    padding: 0 0 80px;
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+
+    .container {
+        z-index: 5;
+
+        .construction_stages-swiper {
+            padding: 0 0 54px;
+            height: 100%;
+            width: 335px;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+
+            .construction_stages-descr {
+                margin: 15px 0 0;
+                display: block;
+                color: $Color_black;
+                font-family: 'RobotoCondensed';
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 160%;
+                letter-spacing: 0.8px;
+            }
+
+            .construction_stages-link {
+                color: $Color_black;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 12px;
+                font-weight: 400;
+                letter-spacing: 0.36px;
+                text-transform: uppercase;
+                display: block;
+                margin: 30px 0 0;
+                position: relative;
+                width: 160px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background: url('../img/arrow.svg') center center/cover no-repeat;
+                    top: -5px;
+                    right: -3px;
+                    width: 23px;
+                    height: 23px;
+
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background: url('../img/box.svg') center center/cover no-repeat;
+                    top: -6px;
+                    right: -4px;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            .swiper-wrapper {
+                display: flex;
+                margin: 40px 0 0;
+
+                .swiper-slide {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+
+                    .construction_stages__item {
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 334px;
+                        height: 349px;
+                        border: 1px solid #0b1215;
+                        padding: 20px;
+                        position: relative;
+                        transition: ease .5s all;
+
+                        &::before {
+                            
+                            content: '';
+                            position: absolute;
+                            inset: 0;
+                            z-index: -1;
+                            background: linear-gradient(0deg, rgba(11, 18, 21, 0.80) 0%, rgba(11, 18, 21, 0.80) 100%);
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        }
+
+                        .construction_img {
+                            position: absolute;
+                            inset: 0;
+                            z-index: -2;
+                            display: block;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        .construction_stages__item-title {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-start;
+
+                            h4 {
+                                color: $Color_white;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 18px;
+                                font-weight: 500;
+                                line-height: 125%;
+                                text-transform: uppercase;
+                                width: 230px;
+
+                            }
+
+                            span {
+                                color: $Color_white;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 10px;
+                                font-weight: 300;
+                                line-height: 150%;
+                                letter-spacing: -0.11px;
+
+                            }
+                        }
+
+                        p {
+                            color: $Color_white;
+                            font-family: 'RobotoCondensed', sans-serif;
+                            font-size: 14px;
+                            font-weight: 300;
+                            line-height: 150%;
+                            letter-spacing: 1.4px;
+                            display: block;
+                            padding-right: 13px;
+                        }
+                    }
+
+                    .black-text {
+                        transition: ease .5s all;
+
+                        &::before {
+                            display: none;
+
+                        }
+
+                        .construction_stages__item-title {
+                            h4 {
+                                color: $Color_black;
+                            }
+
+                            span {
+                                color: $Color_black;
+                            }
+                        }
+
+                        p {
+                            color: $Color_black;
+                        }
+                    }
+
+                    .last-slide {
+                        &::before {
+                            background: #0B1215;
+                        }
+                    }
+                }
+            }
+
+            .swiper-button-next {
+                position: absolute;
+                bottom: 0;
+                left: 56%;
+                width: 18px;
+                height: 14px;
+                background: url('../img/arrow-slider-black.svg') center center/cover no-repeat;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            .swiper-button-prev {
+                position: absolute;
+                bottom: 0;
+                left: 39%;
+                width: 18px;
+                height: 14px;
+                background: url('../img/arrow-slider-black.svg') center center/cover no-repeat;
+                transform: rotate(180deg);
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        .construction_stages-grid {
+            display: none;
+        }
+
+    }
+}
+
+@media (min-width: 768px) {
+    .construction_stages {
+        padding: 49px 0 120px;
+
+        .container {
+            .construction_stages-swiper {
+                display: none;
+            }
+
+            .construction_stages-grid {
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(2, 334px);
+                grid-template-rows: repeat(5, 349px);
+
+                .construction_stages__item {
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 334px;
+                    height: 349px;
+                    border: 1px solid $Color_black;
+                    background: rgba(0, 0, 0, 0.01);
+                    backdrop-filter: blur(2px);
+                    padding: 20px;
+                    transition: .5s all ease;
+                    position: relative;
+
+                    &::before {
+                        transition: ease .5s all;
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        z-index: -1;
+                        background: rgba(11, 18, 21, 0.80) 100%;
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    }
+
+                    .construction_img {
+                        position: absolute;
+                        inset: 0;
+                        z-index: -2;
+                        display: block;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    &-title {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+
+                        h4 {
+                            color: $Color_white;
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 125%;
+                            text-transform: uppercase;
+                            width: 230px;
+
+                        }
+
+                        span {
+                            color: $Color_white;
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 10px;
+                            font-weight: 300;
+                            line-height: 150%;
+                            letter-spacing: -0.11px;
+                        }
+                    }
+
+                    p {
+                        color: $Color_white;
+                        font-family: 'RobotoCondensed', sans-serif;
+                        font-size: 14px;
+                        font-weight: 300;
+                        line-height: 150%;
+                        letter-spacing: 0.56px;
+                        display: block;
+                        padding-right: 13px;
+                    }
+
+                }
+
+                .block_title {
+                    padding: 80px 10px 80px 35px;
+
+                    .construction_stages-descr {
+                        margin: 15px 0 0;
+                        display: block;
+                        color: $Color_black;
+                        font-family: 'RobotoCondensed';
+                        font-size: 14px;
+                        font-weight: 300;
+                        line-height: 160%;
+                        letter-spacing: 0.8px;
+                    }
+
+                    .construction_stages-link {
+                        color: $Color_black;
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 12px;
+                        font-weight: 400;
+                        letter-spacing: 0.36px;
+                        text-transform: uppercase;
+                        display: block;
+                        margin: 30px 0 0;
+                        position: relative;
+                        width: 160px;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            background: url('../img/arrow.svg') center center/cover no-repeat;
+                            top: -5px;
+                            right: -3px;
+                            width: 23px;
+                            height: 23px;
+
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            background: url('../img/box.svg') center center/cover no-repeat;
+                            top: -6px;
+                            right: -4px;
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+
+                .black-text {
+                    transition: ease .5s all;
+
+                    /* &:hover {
+                        background: rgba(11, 18, 21, 0.90);
+                    } */
+
+                    &::before {
+                        display: none;
+
+                    }
+
+                    .construction_stages__item-title {
+                        h4 {
+                            color: $Color_black;
+                        }
+
+                        span {
+                            color: $Color_black;
+                        }
+                    }
+
+                    p {
+                        color: $Color_black;
+                    }
+                }
+
+                .last-slide {
+                    background: #0B1215;
+                    .construction_img {
+                        opacity: 0;
+                        transition: ease .5s all;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 1024px) {
+    .construction_stages {
+        .container {
+            .construction_stages-grid {
+                grid-template-columns: repeat(3, 309px);
+                grid-template-rows: repeat(4, 349px);
+
+                .construction_stages__item {
+                    width: 309px;
+                    height: 349px;
+                    transition: ease .5s all;
+
+                    &:hover {
+                        &::before {
+                            background: #0B1215;
+                        }
+                    }
+                }
+
+                .block_title {
+                    padding: 75px 0px 100px 160px;
+                    grid-column: 2/4;
+                    .construction_stages-link {
+                        &:hover {
+                            &::before {
+                                transition: .3s all;
+                                transform: rotate(45deg);
+                
+                            }
+                        }
+                    }
+                    
+                }
+                .black-text {
+                    &:hover {
+                        background: rgba(11, 18, 21, 0.90);
+                        .construction_stages__item-title {
+                            h4 {
+                                color: $Color_white;
+                            }
+                            span {
+                                color: $Color_white;  
+                            }
+                        }
+                        p {
+                            color: $Color_white;
+                        }
+                    }
+                }
+                .last-slide {
+                    &:hover {
+                        background:  transparent;
+                        &::before {
+                            background: rgba(11, 18, 21, 0.80);
+                        }
+                        .construction_img {
+                            opacity: 1;
+                            
+                        }
+                        
+                    }
+                }
+                #seven {
+                    grid-column: 1/2;
+                    grid-row: 4/5;
+                }
+
+                #eighth {
+                    grid-row: 4/5;
+                    grid-column: 2/3;
+                }
+
+                #nine {
+                    grid-row: 4/5;
+                    grid-column: 3/4;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .construction_stages {
+        padding: 50px 0 180px;
+
+        .container {
+            .construction_stages-grid {
+                padding: 10px 0 0;
+                grid-template-rows: repeat(3, 349px);
+                grid-template-columns: repeat(4, 309px);
+
+                .construction_stages__item {
+                    &-title {
+                        h4 {
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .block_title {
+                    grid-column: 3/5;
+                    padding: 93px 20px 90px 117px;
+                    .construction_stages-descr {
+                        font-size: 16px;
+                    }
+                    
+                }
+                #two {
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                }
+                #seven {
+                    grid-row: 3 / 4;
+                }
+    
+                #eighth {
+                    grid-row: 3 / 4;
+                }
+                #nine {
+                    grid-row: 3 / 4;
+                }
+
+            }
+
+            
+        }
+    }
+
+}
+
+@media (min-width: 1880px) {
+    .construction_stages {
+        padding: 50px 0 200px;
+
+        .container {
+            .construction_stages-grid {
+                grid-template-columns: repeat(3, 431px);
+                grid-template-rows: repeat(3, 351px);
+                grid-auto-columns: min-content;
+
+                .construction_stages__item {
+                    width: 431px;
+                    height: 351px;
+
+                    &-title {
+                        h4 {
+                            font-size: 22px;
+                            width: 270px;
+                        }
+
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+                .block_title {
+                    padding: 89px 135px 90px 152px;
+                    .construction_stages-descr {
+                        font-size: 18px;
+                    }
+                    .construction_stages-link {
+                        font-size: 14px;
+                        width: 190px;
+                        &::before {
+                            right: 0px;
+                            width: 25px;
+                            height: 25px;
+                        }
+                        &::after {
+                            top: -8px;
+                            right: -2px;
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

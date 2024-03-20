@@ -1,0 +1,223 @@
+.construction_reviews {
+    padding: 0 20px;
+    &-slider {
+        position: relative;
+        width: 335px;
+        margin: 0 auto;
+        .swiper-wrapper {
+            padding-top: 40px;
+            .swiper-slide {
+                display: flex;
+                justify-content: space-between;
+                .user_photo {
+                    width: 65px;
+                    height: 65px;
+                    border-radius: 3px;
+                    img {
+                        width: 65px;
+                        height: 65px;
+                    }
+                }
+                .reviews_content {
+                    .user_data {
+                        font-family: 'Montserrat', sans-serif;
+                        color: $Color_black;
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 125%;
+                        text-transform: capitalize;
+                    }
+                    .user_rating {
+                        display: flex;
+                        margin-top: 8px;
+                        width: 88px;
+                        justify-content: space-between;
+                        .user_star {
+                            img {
+
+                            }
+                        }
+                    }
+                    .user_comment {
+                        font-family: 'RobotoCondensed', sans-serif;
+                        display: block;
+                        width: 250px;
+                        color: $Color_black;
+                        font-size: 12px;
+                        font-weight: 300;
+                        line-height: 150%;
+                        letter-spacing: 0.48px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        .swiper-button-next {
+            position: absolute;
+            top: 25px;
+            left: 91%;
+
+            width: 18px;
+            height: 14px;
+            background: url('../img/arrow-slider-black.svg') center center/cover no-repeat;
+            &::after {
+                display: none;
+            }
+
+        }
+
+        .swiper-button-prev {
+            position: absolute;
+            left: 73%;
+            top: 25px;
+            width: 18px;
+            height: 14px;
+            background: url('../img/arrow-slider-black.svg') center center/cover no-repeat;
+            transform: rotate(180deg);
+            &::after {
+                font-size: 0;
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .construction_reviews {
+        padding: 0 0 0 50px;
+        &-slider {
+            
+            width: 100%;
+            .swiper-wrapper {
+                padding-top: 67px;
+                .swiper-slide {
+                    width: 450px;
+                    
+                    .user_photo {
+                        width: 85px;
+                        height: 85px;
+                        img {
+                            width: 85px;
+                            height: 85px;
+                            
+                        }
+                    }
+                    .reviews_content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        width: 347px;
+                        .user_data {
+
+                        }
+                        .user_rating {
+                            margin: 3px 10px 0 0;
+                            
+                        }
+                        .user_comment {
+                            font-size: 14px;
+                            width: 335px;
+                            margin-top: 16px;
+                        }
+                    }
+                }
+            }
+            .swiper-button-prev {
+                left: 81%;
+            }
+            .swiper-button-next {
+                left: 89%;
+
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .construction_reviews {
+        &-slider {
+            .swiper-wrapper {
+                .swiper-slide {
+                    .reviews_content {
+                        .user_rating {
+                            margin: 3px 0px 0 0;
+                        }
+                    }
+                }
+                
+            }
+            .swiper-button-prev {
+                left: 86%;
+            }
+            .swiper-button-next {
+                left: 92%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .construction_reviews {
+        padding: 0  0 0 100px;
+        &-slider {
+            .swiper-wrapper {
+                padding-top: 86px;
+
+                .swiper-slide {
+                    width: 505px;
+                    .reviews_content {
+                        width: 400px;
+                        .user_data {
+                            font-size: 20px;
+                        }
+                        .user_rating {
+                            margin: 3px 0px 0 0;
+                        }
+                        .user_comment {
+                            font-size: 16px;
+                            width: 400px;
+                        }
+                    }
+                }
+                
+            }
+            .swiper-button-next {
+                left: 90.5%;
+            }
+        }
+    }
+}
+@media (min-width: 1880px) {
+    .construction_reviews {
+        padding: 0  0 0 100px;
+        &-slider {
+            .swiper-wrapper {
+                padding-top: 86px;
+
+                .swiper-slide {
+                    width: 525px;
+                    .reviews_content {
+                        width: 415px;
+                        .user_data {
+                            line-height: 90%;
+                            font-size: 22px;
+                        }
+                        .user_rating {
+                            margin: 3px 0px 0 0;
+                        }
+                        .user_comment {
+                            font-size: 18px;
+                            width: 415px;
+                        }
+                    }
+                }
+                
+            }
+            .swiper-button-prev {
+                left: 90.5%;
+            }
+            .swiper-button-next {
+                left: 93.5%;
+            }
+        }
+    }
+}
+
+
